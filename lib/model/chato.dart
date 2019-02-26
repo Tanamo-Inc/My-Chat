@@ -49,6 +49,6 @@ List<ChatModel> chat_mod = [
       message: "Hey Flutter, You are so cool !",
       time: "18:10",
       avatarUrl:
-          "https://firebasestorage.googleapis.com/v0/b/tanamoinc-6713f.appspot.com/o/profile.png?alt=media&token=bf10dc4d-c4f5-40af-a495-e661c355d70a"),
+      "https://firebasestorage.googleapis.com/v0/b/tanamoinc-6713f.appspot.com/o/profile.png?alt=media&token=bf10dc4d-c4f5-40af-a495-e661c355d70a"),
 
 ];

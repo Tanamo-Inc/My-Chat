@@ -13,6 +13,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
   TabController _tabController;
 
   @override
@@ -26,6 +28,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      key: _scaffoldKey,
       appBar: new AppBar(
         title: new Text("My Chat"),
         elevation: 0.7,
@@ -41,12 +44,16 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           ],
         ),
         actions: <Widget>[
+
           new Icon(Icons.search),
           new Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5.0),
           ),
           new Icon(Icons.more_vert)
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(),
       ),
       body: new TabBarView(
         controller: _tabController,
@@ -57,13 +64,15 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ],
       ),
       floatingActionButton: new FloatingActionButton(
-        backgroundColor: Theme.of(context).accentColor,
-        child: new Icon(
-          Icons.message,
-          color: Colors.white,
-        ),
-        onPressed: () => print("Hello World"),
-      ),
+          backgroundColor: Theme.of(context).accentColor,
+          child: new Icon(
+            Icons.message,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            _scaffoldKey.currentState
+                .showSnackBar(new SnackBar(content: new Text("HELLO WORLD")));
+          }),
     );
   }
 }
