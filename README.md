@@ -4,7 +4,7 @@ Building a basic chat app using flutter.This Project Is Still In Development mod
 ## ***PREVIEW***
 
 |SPLASH SCREEN|DRAWER | HOME|
-|     ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 | ![Main Page](pic/c1.png)| ![Main Page](pic/c2.png)| ![Main Page](pic/c3.png)|
 
 
