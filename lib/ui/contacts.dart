@@ -12,6 +12,7 @@ class ContactsState extends State<Contacts> {
   @override
   Widget build(BuildContext context) {
     return new ListView.builder(
+
       itemCount: con_mod.length,
       itemBuilder: (context, i) => new Column(
             children: <Widget>[
@@ -47,4 +48,7 @@ class ContactsState extends State<Contacts> {
           ),
     );
   }
+
+
 }
+

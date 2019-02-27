@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:my_chat/model/chato.dart';
+import 'package:my_chat/util/kons.dart';
 
 class Chats extends StatefulWidget {
   @override
@@ -13,9 +13,9 @@ void _showToast(BuildContext context) {
   final scaffold = Scaffold.of(context);
   scaffold.showSnackBar(
     SnackBar(
-      content: const Text('Added to favorite'),
+      content: const Text(Kons.helloworld),
       action: SnackBarAction(
-          label: 'UNDO', onPressed: scaffold.hideCurrentSnackBar),
+          label: Kons.name, onPressed: scaffold.hideCurrentSnackBar),
     ),
   );
 }
@@ -57,13 +57,7 @@ class ChatsState extends State<Chats> {
                   ),
                 ),
                 onTap: () {
-                  //   _showToast(context);
-                  Fluttertoast.showToast(
-                      msg: "HELLO WORLD",
-                      toastLength: Toast.LENGTH_SHORT,
-                      gravity: ToastGravity.CENTER,
-                      backgroundColor: Color(0xffe74c3c),
-                      textColor: Color(0xffffffff));
+                  _showToast(context);
                 },
               )
             ],

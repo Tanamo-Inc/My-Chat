@@ -13,13 +13,15 @@ class CameraScreen extends StatefulWidget {
 }
 
 class CameraScreenState extends State<CameraScreen> {
+
   CameraController controller;
 
   @override
   void initState() {
     super.initState();
-    controller =
-        new CameraController(widget.cameras[0], ResolutionPreset.medium);
+
+    controller =  new CameraController(widget.cameras[0], ResolutionPreset.medium);
+
     controller.initialize().then((_) {
       if (!mounted) {
         return;
@@ -44,4 +46,6 @@ class CameraScreenState extends State<CameraScreen> {
       child: new CameraPreview(controller),
     );
   }
+
+
 }
